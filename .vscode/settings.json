@@ -1,0 +1,11 @@
+{
+    "csharp.enableCodeLensReferences": true,
+    "csharp.enableTestExplorer": true,
+    "csharp.dependencyDiagnosticsEnabled": true,
+    "csharp.suppressDotnetRestoreNotification": false,
+    "csharp.dependencyAnalysisMode": "full",
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true
+    }
+}
