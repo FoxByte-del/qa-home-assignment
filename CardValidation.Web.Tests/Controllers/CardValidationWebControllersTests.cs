@@ -1,4 +1,5 @@
-﻿namespace CardValidation.Web.Tests;
+﻿using NUnit.Framework;
+namespace CardValidation.Web.Tests;
 
 public class Tests
 {
@@ -8,7 +9,6 @@ public class Tests
     }
 
     [Test]
-    // MethodName_Scenario_ExpectedBehavior()
     public void Test1()
     {
         Assert.Pass();
