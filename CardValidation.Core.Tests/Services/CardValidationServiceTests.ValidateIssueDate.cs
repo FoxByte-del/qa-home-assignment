@@ -7,6 +7,7 @@ public partial class CardValidationServiceTests
 
     [TestCase("04/28")]
     [TestCase("05/2028")]
+    [TestCase("0528")]
     public void ValidateIssueDate_ValidDateFormat_ReturnsTrue(string issueDate)
     {
         Assert.That(_service.ValidateIssueDate(issueDate), Is.True);
@@ -14,13 +15,18 @@ public partial class CardValidationServiceTests
 
 
     [TestCase("0/28")]
+    [TestCase("14/28")]
+    [TestCase("00/28")]
     [TestCase("/28")]
     [TestCase("01/2 8")]
     [TestCase("A/28")]
     [TestCase("!0/28")]
-    [TestCase("0528", Ignore = "Returns True, expected behaviour needs specifying")]
     [TestCase("05/20281")]
     [TestCase("05-28")]
+    [TestCase("   ")]
+    [TestCase("12/24")]
+    [TestCase("10/25")]
+
     public void ValidateIssueDate_InvalidDateFormat_ReturnsFalse(string issueDate)
     {
         Assert.That(_service.ValidateIssueDate(issueDate), Is.False);

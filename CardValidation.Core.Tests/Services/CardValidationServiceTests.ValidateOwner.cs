@@ -7,7 +7,9 @@ public partial class CardValidationServiceTests
 
 
     [TestCase("Meow")]
+    [TestCase("meow")]
     [TestCase("Meow Purr")]
+    [TestCase("MeOw PuRr")]
     [TestCase("Meow Purr Arggghh")]
     public void ValidateOwner_ValidOwner_ReturnsTrue(string owner)
     {
@@ -15,9 +17,10 @@ public partial class CardValidationServiceTests
     }
 
     [TestCase("")]
-    [TestCase(" ")]
+    [TestCase("  ")]
+    [TestCase("Meow   Purr")]
     [TestCase(" Meow")]
-    [TestCase("Meow ", Ignore = "Returns True, expected behaviour needs specifying")]
+    [TestCase("Meow ", Ignore = "Returns True (regex treats trailing spaces as valid), expected behaviour needs specifying")]
     [TestCase(" Meow ")]
     [TestCase("Meow Purr Arggghh Meow")]
     [TestCase("Meow!")]
