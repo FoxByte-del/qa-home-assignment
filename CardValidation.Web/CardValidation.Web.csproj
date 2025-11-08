@@ -14,4 +14,9 @@
     <ProjectReference Include="..\CardValidation.Core\CardValidation.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="CardValidation.IntegrationTests" />
+</ItemGroup>
+
+
 </Project>

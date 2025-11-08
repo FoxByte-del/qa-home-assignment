@@ -1,11 +1,22 @@
 {
+    
     "csharp.enableCodeLensReferences": true,
     "csharp.enableTestExplorer": true,
     "csharp.dependencyDiagnosticsEnabled": true,
     "csharp.suppressDotnetRestoreNotification": false,
     "csharp.dependencyAnalysisMode": "full",
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+    "*.feature": "${capture}.feature.cs"
+    },
     "files.exclude": {
         "**/bin": true,
         "**/obj": true
-    }
+    },
+    "cucumber.glue": [
+    "CardValidation.IntegrationTests/**/*.cs",
+     ],
+    "cucumber.features": [
+    "CardValidation.IntegrationTests/**/*.feature",
+  ]
 }

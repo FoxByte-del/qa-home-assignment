@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardValidation.Core.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardValidation.Web.Tests", "CardValidation.Web.Tests\CardValidation.Web.Tests.csproj", "{EF01A5E1-6C11-4C4C-B1F6-239701FC6C1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardValidation.IntegrationTests", "CardValidation.IntegrationTests\CardValidation.IntegrationTests.csproj", "{F9634B2F-E215-419A-99EC-94D24D072A57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{EF01A5E1-6C11-4C4C-B1F6-239701FC6C1A}.Release|x64.Build.0 = Release|Any CPU
 		{EF01A5E1-6C11-4C4C-B1F6-239701FC6C1A}.Release|x86.ActiveCfg = Release|Any CPU
 		{EF01A5E1-6C11-4C4C-B1F6-239701FC6C1A}.Release|x86.Build.0 = Release|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Debug|x64.Build.0 = Debug|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Debug|x86.Build.0 = Debug|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Release|x64.ActiveCfg = Release|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Release|x64.Build.0 = Release|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Release|x86.ActiveCfg = Release|Any CPU
+		{F9634B2F-E215-419A-99EC-94D24D072A57}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
