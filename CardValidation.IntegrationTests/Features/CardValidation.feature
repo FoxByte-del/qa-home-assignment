@@ -25,3 +25,10 @@ API that validates credit card data.
         When the card validation request is sent
         Then the response status code should be "200"
         And the response should contain "30"
+
+    Scenario: Empty input fields return error
+        Given the following card data is inserted:
+            | Owner      | CardNumber       | IssueDate | CVV |
+            |||||
+        When the card validation request is sent
+        Then the response status code should be "400"
