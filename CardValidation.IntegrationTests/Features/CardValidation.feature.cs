@@ -105,7 +105,7 @@ namespace CardValidation.IntegrationTests.Features
         
         private static global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages InitializeCucumberMessages()
         {
-            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/CardValidation.feature.ndjson", 5);
+            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/CardValidation.feature.ndjson", 14);
         }
         
         [global::NUnit.Framework.TestAttribute()]
@@ -241,6 +241,420 @@ namespace CardValidation.IntegrationTests.Features
 #line hidden
 #line 27
         await testRunner.AndAsync("the response should contain \"30\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Empty input fields return error")]
+        public async global::System.Threading.Tasks.Task EmptyInputFieldsReturnError()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "3";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Empty input fields return error", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 29
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table4 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table4.AddRow(new string[] {
+                            "",
+                            "",
+                            "",
+                            ""});
+#line 30
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table4, "Given ");
+#line hidden
+#line 33
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 34
+        await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 35
+        await testRunner.AndAsync("the response should contain \"is required\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Empty owner input field returns error")]
+        public async global::System.Threading.Tasks.Task EmptyOwnerInputFieldReturnsError()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "4";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Empty owner input field returns error", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 37
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table5 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table5.AddRow(new string[] {
+                            "",
+                            "378282246310005",
+                            "04/28",
+                            "4411"});
+#line 38
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table5, "Given ");
+#line hidden
+#line 41
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 42
+        await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 43
+        await testRunner.AndAsync("the response should contain \"Owner is required\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Empty card number input field returns error")]
+        public async global::System.Threading.Tasks.Task EmptyCardNumberInputFieldReturnsError()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "5";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Empty card number input field returns error", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 45
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table6 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table6.AddRow(new string[] {
+                            "Meow Purr",
+                            "",
+                            "04/28",
+                            "741"});
+#line 46
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table6, "Given ");
+#line hidden
+#line 49
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 50
+        await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 51
+        await testRunner.AndAsync("the response should contain \"Number is required\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Empty date input field returns error")]
+        public async global::System.Threading.Tasks.Task EmptyDateInputFieldReturnsError()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "6";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Empty date input field returns error", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 53
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table7 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table7.AddRow(new string[] {
+                            "Meow Purr",
+                            "4462030000000000",
+                            "",
+                            "746"});
+#line 54
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table7, "Given ");
+#line hidden
+#line 57
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 58
+        await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 59
+        await testRunner.AndAsync("the response should contain \"Date is required\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Empty CVV input field returns error")]
+        public async global::System.Threading.Tasks.Task EmptyCVVInputFieldReturnsError()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "7";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Empty CVV input field returns error", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 61
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table8 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table8.AddRow(new string[] {
+                            "Meow Purr",
+                            "2222630000001125",
+                            "04/28",
+                            ""});
+#line 62
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table8, "Given ");
+#line hidden
+#line 65
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 66
+        await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 67
+        await testRunner.AndAsync("the response should contain \"Cvv is required\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Date in past returns error")]
+        public async global::System.Threading.Tasks.Task DateInPastReturnsError()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "8";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Date in past returns error", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 69
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table9 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table9.AddRow(new string[] {
+                            "Meow Purr",
+                            "378282246310005",
+                            "12/24",
+                            "4411"});
+#line 70
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table9, "Given ");
+#line hidden
+#line 73
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 74
+        await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 75
+        await testRunner.AndAsync("the response should contain \"Wrong date\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Too long CVV returns error")]
+        public async global::System.Threading.Tasks.Task TooLongCVVReturnsError()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "9";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Too long CVV returns error", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 77
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table10 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table10.AddRow(new string[] {
+                            "Meow Purr",
+                            "378282246310005",
+                            "12/26",
+                            "441187543"});
+#line 78
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table10, "Given ");
+#line hidden
+#line 81
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 82
+        await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 83
+        await testRunner.AndAsync("the response should contain \"Wrong cvv\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Too long owner name returns error")]
+        public async global::System.Threading.Tasks.Task TooLongOwnerNameReturnsError()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "10";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Too long owner name returns error", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 85
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table11 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table11.AddRow(new string[] {
+                            "Meow Purr Meow Snowball",
+                            "378282246310005",
+                            "12/26",
+                            "4411"});
+#line 86
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table11, "Given ");
+#line hidden
+#line 89
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 90
+        await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 91
+        await testRunner.AndAsync("the response should contain \"Wrong owner\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Wrong card number returns error")]
+        public async global::System.Threading.Tasks.Task WrongCardNumberReturnsError()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "11";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Wrong card number returns error", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 93
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table12 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table12.AddRow(new string[] {
+                            "Meow Purr",
+                            "078282246310005",
+                            "12/26",
+                            "441"});
+#line 94
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table12, "Given ");
+#line hidden
+#line 97
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 98
+        await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 99
+        await testRunner.AndAsync("the response should contain \"Wrong number\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

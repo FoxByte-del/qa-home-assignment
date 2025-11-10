@@ -8,6 +8,7 @@ public partial class CardValidationServiceTests
     [TestCase("04/28")]
     [TestCase("05/2028")]
     [TestCase("0528")]
+    [TestCase("11/25", Ignore = "Expected behaviour needs specifying - should the due date be at the beginning of the month or at the end of the month?")]
     public void ValidateIssueDate_ValidDateFormat_ReturnsTrue(string issueDate)
     {
         Assert.That(_service.ValidateIssueDate(issueDate), Is.True);
