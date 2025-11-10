@@ -105,17 +105,17 @@ namespace CardValidation.IntegrationTests.Features
         
         private static global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages InitializeCucumberMessages()
         {
-            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/CardValidation.feature.ndjson", 3);
+            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/CardValidation.feature.ndjson", 5);
         }
         
         [global::NUnit.Framework.TestAttribute()]
-        [global::NUnit.Framework.DescriptionAttribute("Valid Visa card returns Visa as card type")]
-        public async global::System.Threading.Tasks.Task ValidVisaCardReturnsVisaAsCardType()
+        [global::NUnit.Framework.DescriptionAttribute("Valid Visa card returns proper card type")]
+        public async global::System.Threading.Tasks.Task ValidVisaCardReturnsProperCardType()
         {
             string[] tagsOfScenario = ((string[])(null));
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "0";
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Valid Visa card returns Visa as card type", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Valid Visa card returns proper card type", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
 #line 5
@@ -132,7 +132,7 @@ namespace CardValidation.IntegrationTests.Features
                             "Owner",
                             "CardNumber",
                             "IssueDate",
-                            "CVC"});
+                            "CVV"});
                 table1.AddRow(new string[] {
                             "Meow Purr",
                             "4462030000000000",
@@ -149,6 +149,98 @@ namespace CardValidation.IntegrationTests.Features
 #line hidden
 #line 11
         await testRunner.AndAsync("the response should contain \"10\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Valid Mastercard card returns proper card type")]
+        public async global::System.Threading.Tasks.Task ValidMastercardCardReturnsProperCardType()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "1";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Valid Mastercard card returns proper card type", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 13
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table2 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table2.AddRow(new string[] {
+                            "Meow Purr",
+                            "2222630000001125",
+                            "04/28",
+                            "741"});
+#line 14
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table2, "Given ");
+#line hidden
+#line 17
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 18
+        await testRunner.ThenAsync("the response status code should be \"200\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 19
+        await testRunner.AndAsync("the response should contain \"20\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Valid American Express card returns proper card type")]
+        public async global::System.Threading.Tasks.Task ValidAmericanExpressCardReturnsProperCardType()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "2";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Valid American Express card returns proper card type", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 21
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table3 = new global::Reqnroll.Table(new string[] {
+                            "Owner",
+                            "CardNumber",
+                            "IssueDate",
+                            "CVV"});
+                table3.AddRow(new string[] {
+                            "Meow Purr",
+                            "378282246310005",
+                            "04/28",
+                            "4411"});
+#line 22
+        await testRunner.GivenAsync("the following card data is inserted:", ((string)(null)), table3, "Given ");
+#line hidden
+#line 25
+        await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 26
+        await testRunner.ThenAsync("the response status code should be \"200\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 27
+        await testRunner.AndAsync("the response should contain \"30\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
