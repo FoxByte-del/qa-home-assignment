@@ -1,3 +1,41 @@
+# Solution
+
+## For Running Tests (Docker-based)
+This project runs both **unit** and **integration tests** inside a Docker container.  
+No need to install .NET SDK locally — just have **Docker Desktop** running.
+
+### macOS
+
+```
+./scripts/run-tests.sh 
+```
+
+#### Troubleshooting
+If you get `permission denied: ./scripts/run-tests.sh`
+Give the script execute permissions:
+```
+chmod +x ./scripts/run-tests.sh
+```
+
+
+### Windows (PowerShell)
+Disclaimer! Haven't been tested on Windows.
+```
+.\scripts\run-tests.ps1
+```
+
+#### Troubleshooting
+If you get `.\\scripts\\run-tests.ps1 cannot be loaded because running scripts is disabled on this system.`
+Allow local scripts to run (once):
+```
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+
+
+#### Example result with macOs
+<img width="1037" height="839" alt="image" src="https://github.com/user-attachments/assets/e8765b73-9207-4086-b2db-96cead6d0d4d" />
+
+
 # Home Assignment
 
 You will be required to write unit tests and automated tests for a payment application to demonstrate your skills. 
