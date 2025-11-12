@@ -6,7 +6,7 @@ Feature: Validate credit card data
       | Owner     | CardNumber       | IssueDate | CVV |
       | Meow Purr | <number>         | 04/28     | <cvv> |
     When the card validation request is sent
-    Then the response status code should be "200"
+    Then the response status code should be 200
     And the response should contain "<result>"
 
     Examples:
@@ -20,7 +20,7 @@ Feature: Validate credit card data
       | Owner     | CardNumber   | IssueDate | CVV |
       | <owner>   | <number>     | <date>    | <cvv> |
     When the card validation request is sent
-    Then the response status code should be "400"
+    Then the response status code should be 400
     And the response should contain "<error>"
 
     Examples:
@@ -36,7 +36,7 @@ Feature: Validate credit card data
       | Owner     | CardNumber       | IssueDate | CVV |
       | <owner>   | <number>         | <date>    | <cvv> |
     When the card validation request is sent
-    Then the response status code should be "400"
+    Then the response status code should be 400
     And the response should contain "<error>"
 
     Examples:

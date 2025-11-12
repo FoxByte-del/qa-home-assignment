@@ -41,7 +41,7 @@ public class CardValidationSteps
         _context["Body"] = await response.Content.ReadAsStringAsync();
     }
 
-    [Then("the response status code should be {string}")]
+    [Then("the response status code should be {int}")]
     public void ThenTheResponseStatusCodeShouldBe(int expectedStatus)
     {
         var response = (HttpResponseMessage)_context["Response"];
