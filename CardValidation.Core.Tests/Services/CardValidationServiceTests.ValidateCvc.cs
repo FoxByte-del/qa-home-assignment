@@ -10,7 +10,7 @@ public partial class CardValidationServiceTests
     [TestCase("000")]
     public void ValidateCvc_ValidCvc_ReturnsTrue(string cvc)
     {
-        Assert.That(_service.ValidateCvc(cvc), Is.False);
+        Assert.That(_service.ValidateCvc(cvc), Is.True);
     }
 
     [TestCase("")]
