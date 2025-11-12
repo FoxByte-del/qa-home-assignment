@@ -1,0 +1,11 @@
+FROM mcr.microsoft.com/dotnet/sdk:9.0
+
+WORKDIR /app
+
+COPY . .
+
+RUN dotnet restore CardValidation.sln
+RUN dotnet build CardValidation.sln -c Release --no-restore
+
+# Default test command (will be overridden by the script)
+CMD ["/bin/bash", "scripts/run-tests.sh"]

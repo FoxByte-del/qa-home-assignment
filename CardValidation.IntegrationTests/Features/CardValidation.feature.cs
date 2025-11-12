@@ -151,7 +151,7 @@ namespace CardValidation.IntegrationTests.Features
     await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 9
-    await testRunner.ThenAsync("the response status code should be \"200\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+    await testRunner.ThenAsync("the response status code should be 300", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
 #line 10
     await testRunner.AndAsync(string.Format("the response should contain \"{0}\"", result), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
@@ -207,7 +207,7 @@ namespace CardValidation.IntegrationTests.Features
     await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 23
-    await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+    await testRunner.ThenAsync("the response status code should be 400", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
 #line 24
     await testRunner.AndAsync(string.Format("the response should contain \"{0}\"", error), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
@@ -262,7 +262,7 @@ namespace CardValidation.IntegrationTests.Features
     await testRunner.WhenAsync("the card validation request is sent", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 39
-    await testRunner.ThenAsync("the response status code should be \"400\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+    await testRunner.ThenAsync("the response status code should be 400", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
 #line 40
     await testRunner.AndAsync(string.Format("the response should contain \"{0}\"", error), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
